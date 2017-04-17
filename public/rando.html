@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<script type="text/javascript">
+
+		//random function 
+		var images = ['/image1.jpg', '/image2.png', '/image3.gif'];
+
+		function randomImage() {
+
+			var rand = images[Math.floor(Math.random() * images.length)];
+			
+			var image = "<img src='" + rand+ "'>";
+			
+			return image;
+
+		}
+
+	</script> 
+
+</head>
+
+
+<body>
+
+	<h1>A Random Image of Harry Potter</h1> 
+
+	<a href="/home">Home</a> 
+	<a href="/about">About</a> 
+	<a href="/rando">Rando</a> 
+
+	<div class="image">
+		<script type="text/javascript">
+			document.write( randomImage() );
+		</script>
+	</div>
+
+</body>
+</html>
